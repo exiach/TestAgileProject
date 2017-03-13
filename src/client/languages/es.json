@@ -1,0 +1,45 @@
+{
+  "ADD_USER": {
+    "LABEL_SIGN_UP": "Regístrate",
+    "LABEL_FIRST_NAME": "Nombres",
+    "LABEL_LAST_NAME": "Apellidos",
+    "LABEL_EMAIL_ADDRESS": "Dirección Email",
+    "LABEL_PASSWORD": "Contraseña",
+    "LABEL_CONFIRM_PASSWORD": "Confirmar contraseña",
+    "LABEL_BIRTHDAY": "Cumpleaños",
+    "INPUT_MALE": "masculino",
+    "INPUT_FEMALE": "femenino"
+  },
+
+  "PROJECT": {
+    "LABEL_CREATE_PROJECT": "Crear Proyecto",
+    "LABEL_TITLE": "Titulo",
+    "LABEL_DESCRIPTION": "Descripción",
+    "LABEL_STAR_DATE": "Fecha de inicio",
+    "LABEL_ITERATION_LENGTH": "Tamaño de la iteración (Semanas)",
+    "INPUT_CREATE": "crear"
+  },
+
+  "ADD_USER_STORY": {
+    "LABEL_ADD_USER_STORY": "Añadir Historia de Usuario",
+    "LABEL_TITLE": "Titulo",
+    "PLACEHOLDER_TITLE": "Introducir titulo de historia de usuario",
+    "LABEL_DESCRIPTION": "Descripción",
+    "PLACEHOLDER_DESCRIPTION": "Introducir descripción",
+    "LABEL_TYPE": "Tipo",
+    "OPTION_TYPE_DEFAULT": "Seleccionar tipo",
+    "LABEL_POINTS": "Puntos",
+    "OPTION_POINTS_DEFAULT": "Seleccionar puntos",
+    "INPUT_ADD": "Añadir"
+  },
+
+  "PROFILE": {
+    "LABEL_PROFILE": "Perfil"
+  },
+
+  "SETTINGS": {
+    "LABEL_SETTINGS": "Configuraciones",
+    "BUTTON_ENGLISH": "ingles",
+    "BUTTON_SPANISH": "español"
+  }
+}

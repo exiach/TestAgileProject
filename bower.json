@@ -1,0 +1,24 @@
+{
+  "name": "AgileTracker",
+  "description": "This app helps you to list todo tasks and done tasks",
+  "dependencies": {
+    "jquery": "2.1.4",
+    "bootstrap": "3.3.6",
+    "angular": "1.4.9",
+    "angular-new-router": "~0.5.3",
+    "angular-resource": "~1.4.9",
+    "angular-translate": "~2.8.1",
+    "angular-translate-loader-partial": "~2.8.1",
+    "angular-cookies": "~1.4.9"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.4.9"
+  }
+}

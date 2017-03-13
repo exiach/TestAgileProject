@@ -1,0 +1,15 @@
+<div class="panel-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse-{{status}}">
+            {{status}}
+        </div>
+        <div id="collapse-{{status}}" class="panel-body panel-collapse collapse in">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-{{context}}"
+                   ng-repeat="userStory in stories | filter : status">
+                    <user-story></user-story>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

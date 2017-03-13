@@ -1,0 +1,19 @@
+<main-container>
+    <sidebar>
+        <button type="button" class="btn btn-primary btn-group-justified" ng-click="project.goToUS()">
+            + {{ 'ADD_USER_STORY.LABEL_ADD_USER_STORY' | translate }}
+        </button>
+    </sidebar>
+    <div id="main-content">
+        <div>
+            <sidebar-toggle></sidebar-toggle>
+            <h1>
+                {{project.currentProject.title}}
+                <small>{{project.currentProject.description}}</small>
+            </h1>
+        </div>
+        <stories-list status="{{project.status.DONE}}" stories="project.userStories"></stories-list>
+        <stories-list status="{{project.status.CURRENT}}" stories="project.userStories"></stories-list>
+        <stories-list status="{{project.status.BACKLOG}}" stories="project.userStories"></stories-list>
+    </div>
+</main-container>

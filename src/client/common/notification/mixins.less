@@ -1,0 +1,41 @@
+@import 'constants';
+
+.box-shadow() {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+       -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+         -o-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.generate-tops(@n, @i: 1) when (@i <= @n) {
+    & + .notification-message {
+        top: @top + @i * (@height + @shadow-height);
+        .generate-tops(@n, (@i + 1));
+    }
+}
+
+.on-load() {
+    -webkit-animation: fade-in 0.4s;
+       -moz-animation: fade-in 0.4s;
+         -o-animation: fade-in 0.4s;
+            animation: fade-in 0.4s;
+}
+
+.fade-in-mixin() {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.on-close() {
+    -webkit-transition: top 0.5s ease-out, opacity 0.2s ease-out;
+       -moz-transition: top 0.5s ease-out, opacity 0.2s ease-out;
+         -o-transition: top 0.5s ease-out, opacity 0.2s ease-out;
+            transition: top 0.5s ease-out, opacity 0.2s ease-out;
+}
+
+.scroll-right() {
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%)
+}

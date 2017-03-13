@@ -1,0 +1,76 @@
+<div>
+    <div class="error-message"
+         ng-show="addUser.status !== ''">
+        <h2>{{addUser.status}}</h2>
+    </div>
+</div>
+<div class="col-md-4 col-md-offset-4 well well-sm">
+    <legend> Sign up!</legend>
+    <form class="form" name="addUserForm">
+        <div class="form-group row">
+            <div class="col-xs-6 col-md-6">
+                <label for="firstName" class="control-label">{{ 'ADD_USER.LABEL_FIRST_NAME' | translate }}:</label>
+                <input class="form-control" name="firstName" id="firstName" placeholder="{{ 'ADD_USER.LABEL_FIRST_NAME' | translate }}" type="text"
+                       ng-model="addUser.user.firstName" required autofocus pattern=".{6,}"/>
+                <div class="error-message" ng-show="addUser.validate(addUserForm.firstName)">
+                    It needs 6 chars or more.
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+                <label for="lastName" class="control-label">{{ 'ADD_USER.LABEL_LAST_NAME' | translate }}:</label>
+                <input class="form-control" name="lastName" id="lastName" placeholder="{{ 'ADD_USER.LABEL_LAST_NAME' | translate }}" type="text" required
+                       ng-model="addUser.user.lastName" pattern=".{6,}"/>
+                <div class="error-message" ng-show="addUser.validate(addUserForm.lastName)">
+                    It needs 6 chars or more.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="control-label">{{ 'ADD_USER.LABEL_EMAIL_ADDRESS' | translate }}:</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="{{ 'ADD_USER.LABEL_EMAIL_ADDRESS' | translate }}"
+                   ng-model="addUser.user.email" required>
+            <div class="error-message" ng-show="addUser.validate(addUserForm.email)">
+                Invalid e-mail address.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label">{{ 'ADD_USER.LABEL_PASSWORD' | translate }}:</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="{{ 'ADD_USER.LABEL_PASSWORD' | translate }}"
+                   ng-model="addUser.user.password" required pattern=".{6,}">
+            <div class="error-message" ng-show="addUser.validate(addUserForm.password)">
+                It must have at least 6 chars.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword" class="control-label">{{ 'ADD_USER.LABEL_CONFIRM_PASSWORD' | translate }}:</label>
+            <input type="password" name="confirmPassword" class="form-control" id="confirmPassword"
+                   placeholder="{{ 'ADD_USER.LABEL_CONFIRM_PASSWORD' | translate }}"
+                   ng-model="addUser.user.confirmPassword" required compare-to="addUser.user.password">
+            <div class="error-message"
+                 ng-show="addUser.validate(addUserForm.confirmPassword)">
+                Sorry, the passwords don't match.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="birth-day" class="control-label">{{ 'ADD_USER.LABEL_BIRTHDAY' | translate }}:</label>
+            <input type="date" class="form-control" id="birth-day" placeholder="{{ 'ADD_USER.LABEL_BIRTHDAY' | translate }}"
+                   ng-model="addUser.user.birthday" required>
+        </div>
+        <div class="form-group" required>
+            <label class="radio-inline">
+                <input type="radio" name="gender" id="male" value="male" ng-model="addUser.user.gender" required/>
+                {{ 'ADD_USER.INPUT_MALE' | translate }}
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" id="female" value="female" ng-model="addUser.user.gender" required/>
+                {{ 'ADD_USER.INPUT_FEMALE' | translate }}
+            </label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="addUserForm.$invalid"
+                    ng-click="addUser.addUser()">
+                {{ 'ADD_USER.LABEL_SIGN_UP' | translate }}
+            </button>
+        </div>
+    </form>
+</div>

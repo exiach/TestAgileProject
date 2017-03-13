@@ -1,0 +1,16 @@
+{
+  "TOKEN": {
+    "ACCESS_GENERATOR_KEY": "p3bfsT7JPwSAmu8CkbPjj4xbwqyTKmjmN54BSJEQ83mn9FRtjUF52R7Nt2r62RAa",
+    "REFRESH_GENERATOR_KEY": "83mn9FRtwSAmu8CjmN54jUF52R7Nt2r62RAp3bfsT7JPBkbPjw4xbqyTKmjSJEQa",
+    "AUTHORIZATION": "authorization",
+    "ACCESS_EXPIRED_TIME": "30m",
+    "REFRESH_EXPIRED_TIME": "6h"
+  },
+
+  "ENCRYPT": {
+    "ALGORITHM": "aes-256-ctr",
+    "PASSWORD": "5mtRX6LEXyMxcPmb7ZYn3LzsNGJKWV3Tvn8ALukEhdxBzLA3aPgZTFPEVKmAx5h2",
+    "UTF8": "utf8",
+    "HEXADECIMAL": "hex"
+  }
+}

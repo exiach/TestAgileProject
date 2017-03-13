@@ -1,0 +1,84 @@
+<div class="col-md-4 col-md-offset-4 well well-sm">
+    <legend>Profile</legend>
+    <form class="form" name="profileForm">
+        <div class="form-group">
+            <span class="list-group-item active">
+                <div>
+                    MY PROFILE
+                </div>
+                <div align="right">
+                    <input id="edit" class="btn btn-default" type="submit" value="Edit"
+                           ng-click="profile.enableFields=true" ng-hide="profile.enableFields"/>
+                    <input id="cancel" class="btn btn-danger" type="submit" value="Cancel"
+                           ng-click="profile.enableFields=false" ng-show="profile.enableFields"/>
+                    <input id="save" class="btn btn-success" type="submit" value="Save"
+                           ng-click="profile.update(); profile.enableFields=false" ng-show="profile.enableFields"/>
+                </div>
+            </span>
+
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="first-name" class="control-label">User Name</label>
+                    <input id="first-name" class="form-control" type="text"
+                           ng-model="profile.userProfile.firstName" ng-disabled="!profile.enableFields"/>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="last-name" class="control-label">Last Name</label>
+                    <input id="last-name" class="form-control" type="text"
+                           ng-model="profile.userProfile.lastName" ng-disabled="!profile.enableFields"/>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="initials" class="control-label">Initials</label>
+                    <input id="initials" class="form-control" type="text"
+                           ng-model="profile.userProfile.initials" ng-disabled="!profile.enableFields"/>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="birth-day" class="control-label">Birthday:</label>
+                    <input id="birth-day" class="form-control" type="date" placeholder="Birthday"
+                           ng-model="profile.userProfile.birthday" ng-disabled="!profile.enableFields">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label class="radio-inline">
+                        <input id="male" name="gender" type="radio" value="male"
+                               ng-model="profile.userProfile.gender" ng-disabled="!profile.enableFields"/>
+                        Male
+                    </label>
+                    <label class="radio-inline">
+                        <input id="female" name="gender" type="radio" value="female"
+                               ng-model="profile.userProfile.gender" ng-disabled="!profile.enableFields"/>
+                        Female
+                    </label>
+                </div>
+            </li>
+        </div>
+        <div class="form-group">
+            <span class="list-group-item active">
+                <div>
+                    EMAIL & PASSWORD
+                </div>
+            </span>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="email" class="control-label">Email</label>
+                    <input id="email" class="form-control" type="email"
+                           ng-model="profile.userProfile.email" ng-disabled="!profile.enableFields"/>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label for="password" class="control-label">Password</label>
+                    <input id="password" class="form-control" type="password"
+                           ng-model="profile.userProfile.password" ng-disabled="!profile.enableFields"/>
+                </div>
+            </li>
+        </div>
+    </form>
+</div>

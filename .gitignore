@@ -1,0 +1,7 @@
+.idea/
+build/
+node_modules/
+bower_components/
+/npm-debug.log
+reports/
+TESTS-PhantomJS_1.9.8_(Linux_0.0.0).xml

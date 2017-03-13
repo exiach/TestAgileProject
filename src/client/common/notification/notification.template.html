@@ -1,0 +1,11 @@
+<div class="notification-message"
+	 ng-class="[classes, position ? position.toLowerCase() : '']"
+	 ng-style="{ 'margin-left': leftDistance }">
+
+	<div>{{ message }}</div>
+
+	<button type="button" class="notification-close" ng-click="close()">
+		<span class="glyphicon glyphicon-remove"></span>
+	</button>
+
+</div>

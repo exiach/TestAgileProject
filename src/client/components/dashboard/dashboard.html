@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="page-header">
+        <h2> {{ 'DASHBOARD.LABEL_DASHBOARD' | translate }} </h2>
+    </div>
+
+    <table class="table table-striped">
+        <caption>
+            <h3>
+                {{ 'DASHBOARD.LABEL_PROJECTS' | translate }}
+                <a type="button" ng-link="addProject()" class="btn btn-primary pull-right">{{ 'PROJECT.LABEL_CREATE_PROJECT' | translate }}</a>
+            </h3>
+        </caption>
+        <thead>
+            <tr>
+                <th>{{'PROJECT.LABEL_TITLE' | translate}}</th>
+                <th>{{'PROJECT.LABEL_DESCRIPTION' | translate}}</th>
+                <th>{{'PROJECT.LABEL_STAR_DATE' | translate}}</th>
+                <th>{{'PROJECT.LABEL_ITERATION_LENGTH' | translate}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr project-row id="project-{{project.projectId}}" ng-repeat="project in dashboard.projects"></tr>
+        </tbody>
+    </table>
+</div>

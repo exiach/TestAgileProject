@@ -1,0 +1,49 @@
+@import 'constants';
+@import 'mixins';
+
+.notification-message {
+	position: fixed;
+	z-index: 999;
+	max-width: 400px;
+	text-align: center;
+	top: @top;
+	.box-shadow;
+	.generate-tops(@max-open - 1);
+	.on-load;
+	.on-close;
+}
+
+@-webkit-keyframes fade-in { .fade-in-mixin; }
+   @-moz-keyframes fade-in { .fade-in-mixin; }
+     @-o-keyframes fade-in { .fade-in-mixin; }
+        @keyframes fade-in { .fade-in-mixin; }
+
+.center {
+	left: 50%;
+	.scroll-right;
+}
+
+.left {
+	left: @side-distance;
+}
+
+.right {
+	right: @side-distance;
+}
+
+.notification-close {
+	position: absolute;
+	top: 0;
+	right: 3px;
+	padding: 0;
+	background: 0;
+	border: 0;
+	color: #000;
+	opacity: .2;
+	cursor: pointer;
+
+	&:hover, &:focus {
+		text-decoration: none;
+		opacity: .5;
+	}
+}

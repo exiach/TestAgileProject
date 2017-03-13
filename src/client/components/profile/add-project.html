@@ -1,0 +1,29 @@
+<div class="col-md-4 col-md-offset-4 well well-sm">
+    <legend> {{ 'PROJECT.LABEL_CREATE_PROJECT' | translate }} </legend>
+    <form class="form" role="form">
+        <div class="form-group">
+            <label for="projectTitle" class="control-label"> {{ 'PROJECT.LABEL_TITLE' | translate }} * </label>
+            <input class="form-control" id="projectTitle" type="text" ng-model="addProject.newProject.title"
+                   placeholder="enter project title" required="true" autofocus="true">
+        </div>
+        <div class="form-group">
+            <label for="projectDescription" class="control-label"> {{ 'PROJECT.LABEL_DESCRIPTION' | translate }} </label>
+            <textarea class="form-control" id="projectDescription" rows="4"
+                      ng-model="addProject.newProject.description" placeholder="enter project description" ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="projectStartDate" class="control-label"> {{ 'PROJECT.LABEL_STAR_DATE' | translate }} * </label>
+            <input class="form-control" id="projectStartDate" type="date" required="true"
+                   ng-model="addProject.newProject.startDate">
+        </div>
+        <div class="form-group">
+            <label for="projectIterationLength" class="control-label"> {{ 'PROJECT.LABEL_ITERATION_LENGTH' | translate }} * </label>
+            <input class="form-control" id="projectIterationLength" type="number" min=0 max=5
+                   ng-model="addProject.newProject.iterationLength" placeholder="enter number" required="true">
+        </div>
+        <div class="form-group">
+            <div class="col-md-9"></div>
+            <input class="btn btn-success col-md-3" ng-click="addProject.saveProject()" value="{{ 'PROJECT.INPUT_CREATE' | translate }}">
+        </div>
+    </form>
+</div>

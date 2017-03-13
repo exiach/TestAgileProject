@@ -1,0 +1,43 @@
+<div class="row-fluid">
+    <div class="row">
+        <a ng-link="addProject"> Create project </a>
+    </div>
+    <div class="list-group col-md-6">
+        <span href="#" class="list-group-item active"> TODO </span>
+        <li ng-repeat="todo in todoList.todos" href="#" class="list-group-item" ng-show="!todo.status">
+            <div class="row">
+                <div class="col-md-1">
+                    <input type="checkbox" ng-model="todo.status">
+                </div>
+                <div class="col-md-9">
+                    <span>{{todo.text}}</span>
+                </div>
+                <div class="col-md-2">
+                    <input class="btn btn-danger" type="button" ng-click="todoList.removeTodo(todo)" value="x">
+                </div>
+            </div>
+        </li>
+        <hr>
+        <div class="row-fluid">
+            <input class="col-md-10" type="text" ng-model="todoList.textBox" placeholder="add new task here">
+            <input class="btn btn-success col-md-2" type="button" ng-click="todoList.addTodo()" value="add">
+        </div>
+    </div>
+
+    <div class="list-group col-md-6">
+        <span href="#" class="list-group-item active"> DONE </span>
+        <li ng-repeat="todo in todoList.todos" href="#" class="list-group-item" ng-show="todo.status">
+            <div class="row">
+                <div class="col-md-1">
+                    <input type="checkbox" ng-model="todo.status">
+                </div>
+                <div class="col-md-9">
+                    <span>{{todo.text}}</span>
+                </div>
+                <div class="col-md-2">
+                    <input class="btn btn-danger" type="button" ng-click="todoList.removeTodo(todo)" value="x">
+                </div>
+            </div>
+        </li>
+    </div>
+</div>

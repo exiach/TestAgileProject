@@ -1,0 +1,29 @@
+#sidebar {
+    width: 240px;
+    font-size: 12px;
+    font-weight: 600;
+    left: -240px;
+    height: 100%;
+    z-index: 1;
+    overflow-y: auto;
+
+    -webkit-transition: left .2s ease-in-out;
+    -moz-transition: left .2s ease-in-out;
+    -ms-transition: left .2s ease-in-out;
+    -o-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out;
+
+    &.open {
+        left: 0;
+    }
+
+    @media (min-width: 992px) {
+        & {
+            left: 0;
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+}

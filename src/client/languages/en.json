@@ -1,0 +1,51 @@
+{
+  "ADD_USER": {
+    "LABEL_SIGN_UP": "Sign up",
+    "LABEL_FIRST_NAME": "First Name",
+    "LABEL_LAST_NAME": "Last Name",
+    "LABEL_EMAIL_ADDRESS": "Email address",
+    "LABEL_PASSWORD": "Password",
+    "LABEL_CONFIRM_PASSWORD": "Confirm password",
+    "LABEL_BIRTHDAY": "Birthday",
+    "INPUT_MALE": "male",
+    "INPUT_FEMALE": "female",
+    "BUTTON_SUBMIT": "submit"
+  },
+
+  "PROJECT": {
+    "LABEL_CREATE_PROJECT": "Create Project",
+    "LABEL_TITLE": "Title",
+    "LABEL_DESCRIPTION": "Description",
+    "LABEL_STAR_DATE": "Start date",
+    "LABEL_ITERATION_LENGTH": "Iteration length (Weeks)",
+    "INPUT_CREATE": "create"
+  },
+
+  "DASHBOARD": {
+    "LABEL_DASHBOARD": "Dashboard",
+    "LABEL_PROJECTS": "Projects"
+   },
+    
+  "ADD_USER_STORY": {
+    "LABEL_ADD_USER_STORY": "Add User Story",
+    "LABEL_TITLE": "Title",
+    "PLACEHOLDER_TITLE": "Enter user story title",
+    "LABEL_DESCRIPTION": "Description",
+    "PLACEHOLDER_DESCRIPTION": "Enter description",
+    "LABEL_TYPE": "Type",
+    "OPTION_TYPE_DEFAULT": "Select your type user story",
+    "LABEL_POINTS": "Points",
+    "OPTION_POINTS_DEFAULT": "Select your points",
+    "INPUT_ADD": "Add"
+  },
+
+  "PROFILE": {
+    "LABEL_PROFILE": "Profile"
+  },
+
+  "SETTINGS": {
+    "LABEL_SETTINGS": "Settings",
+    "BUTTON_ENGLISH": "english",
+    "BUTTON_SPANISH": "spanish"
+  }
+}

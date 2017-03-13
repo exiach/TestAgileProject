@@ -1,0 +1,51 @@
+<div class="col-md-4 col-md-offset-4 well well-sm">
+    <legend> {{ 'ADD_USER_STORY.LABEL_ADD_USER_STORY' | translate }}</legend>
+    <form class="form" role="form">
+        <div class="form-group">
+            <label for="title" class="control-label" required>
+                {{ 'ADD_USER_STORY.LABEL_TITLE' | translate }} * </label>
+            <input type="text" class="form-control" name="title" id="title"
+                   ng-model="addUserStory.newUserStory.title"
+                   required autofocus
+                   placeholder="{{ 'ADD_USER_STORY.PLACEHOLDER_TITLE' | translate }}"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">
+                {{ 'ADD_USER_STORY.LABEL_DESCRIPTION' | translate }} *
+            </label>
+            <textarea class="form-control" rows="3" ng-model="addUserStory.newUserStory.description"
+                      required="true"
+                      placeholder="{{ 'ADD_USER_STORY.PLACEHOLDER_DESCRIPTION' | translate }}"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label"> {{ 'ADD_USER_STORY.LABEL_TYPE' | translate }} * </label>
+            <select class="form-control" ng-model="addUserStory.newUserStory.type"
+                    ng-options="type for type in addUserStory.types" required>
+                <option value="" disabled selected>
+                    {{ 'ADD_USER_STORY.OPTION_TYPE_DEFAULT' | translate }}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label"> {{ 'ADD_USER_STORY.LABEL_POINTS' | translate }} * </label>
+            <select class="form-control" ng-model="addUserStory.newUserStory.points"
+                    ng-options="point for point in addUserStory.points" required>
+                <option value="" disabled selected>
+                    {{ 'ADD_USER_STORY.OPTION_POINTS_DEFAULT' | translate }}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-9">
+                <button class="btn btn-success col-md-3" ng-click="addUserStory.createUserStory()">
+                    {{ 'ADD_USER_STORY.INPUT_ADD' | translate }}
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>

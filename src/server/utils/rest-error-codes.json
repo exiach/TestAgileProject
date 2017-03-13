@@ -1,0 +1,26 @@
+{
+  "FORBIDDEN": {
+    "STATUS": 403,
+    "MESSAGE": "Forbidden."
+  },
+
+  "USER_EXIST": {
+    "STATUS": 409,
+    "MESSAGE": "User already exist."
+  },
+
+  "USER_NOT_FOUND": {
+    "STATUS": 404,
+    "MESSAGE": "User not found or email incorrect, try again!."
+  },
+
+  "PASSWORD_ERROR": {
+    "STATUS": 404,
+    "MESSAGE": "Password incorrect, try again!"
+  },
+
+  "INTERNAL_ERROR": {
+    "STATUS": 500,
+    "MESSAGE": "Internal server error"
+  }
+}
